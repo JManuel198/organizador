@@ -174,7 +174,7 @@ Ejemplos:
   display: none;
   position: absolute;
   top: calc(100% + 8px);  /* 100% = justo debajo del botón + 8px de separación */
-  left: 0;
+  right: 0; /*Abre desde el extremo superior derecho*/
   min-width: 180px;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
