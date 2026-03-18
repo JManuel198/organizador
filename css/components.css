@@ -131,3 +131,75 @@ Ejemplos:
   color: var(--color-danger);
 }
 
+/* ============================================================
+    DROPDOWN — Selector de base de datos
+    Vive en la navbar principal.
+    El menú empieza oculto y se muestra cuando JS agrega
+    la clase --open al contenedor .navbar__db-selector
+   ============================================================ */
+
+/* Contenedor principal del dropdown.
+    position: relative es el punto de referencia para
+   que el menú se posicione justo debajo del botón. */
+.navbar__db-selector {
+  position: relative;
+}
+
+/* Botón que abre y cierra el dropdown.
+   Mismo tamaño que el avatar para consistencia visual. */
+.navbar__dropdown-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.navbar__dropdown-btn:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* El menú desplegable.
+    position: absolute lo saca del flujo normal y lo
+    posiciona respecto al contenedor con position: relative.
+    Empieza oculto con display: none.
+   z-index: 100 lo pone por encima de todo el contenido. */
+.navbar__dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);  /* 100% = justo debajo del botón + 8px de separación */
+  left: 0;
+  min-width: 180px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Cuando el contenedor tiene la clase --open,
+el menú se hace visible.
+   JS agrega y quita esta clase al hacer clic en el botón. */
+.navbar__db-selector--open .navbar__dropdown-menu {
+  display: block;
+}
+
+/* Cada enlace del menú */
+.navbar__dropdown-menu a {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  transition: background-color var(--transition);
+}
+
+.navbar__dropdown-menu a:hover {
+  background-color: var(--color-bg);
+}

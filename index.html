@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 <!-- Sidebar: Barra lateral -->
@@ -104,6 +105,23 @@ La zona de contenido es reemplazada por JS.
 
     <header class="navbar">
 
+<!--Dropdown de base de datos-->
+        <div class="navbar__db-selector">
+            <button class="navbar__dropdown-btn">
+                <i class="fa-solid fa-database"></i>
+            </button>
+            <ul class="navbar__dropdown-menu">
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">EPPs</a></li>
+                <li><a href="#">Personal</a></li>
+                <li><a href="#">Materiales</a></li>
+                <li><a href="#">Herramientas</a></li>
+                <li><a href="#">Ofertas</a></li>
+            </ul>
+        </div>
+
         <div class="navbar__actions">
             <span class="navbar__user">Admin</span>
             <div class="navbar__avatar">A</div>
@@ -115,5 +133,6 @@ La zona de contenido es reemplazada por JS.
     </main>
 
     </div>
+    <script src="js/dropdown.js"></script>
 </body>
 </html>
