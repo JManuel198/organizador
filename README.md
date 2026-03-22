@@ -1,2 +1,2 @@
-# cotizaciones
+# Sistema ERP web básico
 pruebas
