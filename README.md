@@ -1,2 +1,2 @@
-# Sistema ERP web básico
-pruebas
+# Proyecto web de práctica
+Fullstack básico en proceso
