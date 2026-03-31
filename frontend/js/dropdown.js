@@ -33,7 +33,7 @@ document.querySelectorAll('.navbar__dropdown-menu a')
       const vista = enlace.textContent.trim()
 
       // Cargar la vista correspondiente
-      if (vista === 'Clientes') {
+      if (vista === 'Contactos') {
         mostrarListado()
       }
 
