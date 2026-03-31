@@ -22,3 +22,20 @@ dbBtn.addEventListener('click', function(evento) {
 document.addEventListener('click', function() {
     dbSelector.classList.remove('navbar__db-selector--open')
 })
+
+// Conectar cada ítem del dropdown con su vista
+document.querySelectorAll('.navbar__dropdown-menu a')
+  .forEach(function(enlace) {
+    enlace.addEventListener('click', function(evento) {
+      evento.preventDefault()
+
+      // Leer el texto del enlace clickeado
+      const vista = enlace.textContent.trim()
+
+      // Cargar la vista correspondiente
+      if (vista === 'Clientes') {
+        mostrarListado()
+      }
+
+    })
+  })
